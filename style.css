@@ -45,6 +45,14 @@ body {
     cursor: pointer;
 }
 
+.top__items .circle:hover {
+    opacity: 0.7;
+}
+
+.top__items .circle:active {
+    opacity: 0.5;
+}
+
 .music-img {
     width: 205px;
     height: 205px;
@@ -114,8 +122,23 @@ body {
     box-shadow: 5px 5px 5px -4px rgba(0, 0, 0, 0.75);
 }
 
+.controls div:hover {
+    opacity: 0.7;
+}
+
+.controls div:active {
+    opacity: 0.5;
+}
+
 .controls div:nth-child(2) {
     transform: scale(1.5);
     background: #8361a1;
     color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+    .music-player {
+        width: 100%;
+        border-radius: 0%;
+    }
 }
