@@ -21,7 +21,6 @@ body {
 .music-player {
     width: 400px;
     padding: 30px 40px;
-    /* background: linear-gradient(to bottom, #33383e 0%, #17191d 100%); */
     background: linear-gradient(to bottom, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 0%, rgba(128, 30, 121, 1) 100%);
     border-radius: 40px;
     text-align: center;
@@ -59,7 +58,25 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 8px solid #fff;
+
+    animation: rotate 4s linear infinite;
+    animation-play-state: paused;
 }
+
+.music-img.play {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .music-player h1 {
     font-size: 20px;

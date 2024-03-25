@@ -8,10 +8,11 @@ const nextBtn = document.getElementById('next-btn');
 const title = document.getElementById('title');
 const musician = document.getElementById('songer');
 const cover = document.querySelector('.music-img');
+const musicImg = document.querySelector('.music-img');
 
 //songs
-const songs = ['all-eyez-on-me', 'goosebumps', 'middle-child'];
-const songers = ['2pac', 'travis-scott', 'j-cole'];
+const songs = ['all-eyez-on-me', 'goosebumps', 'middle-child', 'venom'];
+const songers = ['2pac', 'travis-scott', 'j-cole', 'eminem'];
 
 let songIndex = 0;
 
@@ -38,12 +39,14 @@ function pauseSong() {
     audio.pause();
     ctrlIcon.classList.remove('fa-pause');
     ctrlIcon.classList.add('fa-play');
+    musicImg.classList.remove('play');
 }
 
 function playSong() {
     audio.play();
     ctrlIcon.classList.add('fa-pause');
     ctrlIcon.classList.remove('fa-play');
+    musicImg.classList.add('play');
 }
 
 function playPause() {
@@ -62,6 +65,7 @@ function prevSong() {
     }
     loadSong(songs[songIndex]);
     loadSonger(songers[songIndex]);
+    musicImg.classList.add('play');
     playSong();
 }
 
@@ -72,6 +76,7 @@ function nextSong() {
     }
     loadSong(songs[songIndex]);
     loadSonger(songers[songIndex]);
+    musicImg.classList.add('play');
     playSong();
 }
 
@@ -86,7 +91,7 @@ if (audio.play()) {
 progress.onchange = function () {
     song.play();
     song.currentTime = progress.value;
-
     ctrlIcon.classList.add('fa-pause');
     ctrlIcon.classList.remove('fa-play');
+    musicImg.classList.add('play');
 };
