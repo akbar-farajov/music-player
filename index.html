@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <title>music player</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="music-player">
+                <nav class="top__items">
+                    <div class="circle">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+                <img
+                    src="media/images/all-eyez-on-me.jpg"
+                    alt="music image"
+                    class="music-img" />
+                <h1 id="title">Middle Child</h1>
+                <p id="songer">Jay Cole</p>
+
+                <audio id="song">
+                    <source
+                        src="media/musics/all-eyez-on-me.mp3"
+                        type="audio/mpeg" />
+                </audio>
+                <input type="range" value="0" id="progress" />
+                <div class="time">
+                    <span id="current-time">00:00</span>
+                    <span id="duration"></span>
+                </div>
+
+                <div class="controls">
+                    <div id="prev-btn" onclick="prevSong()">
+                        <i class="fa-solid fa-backward"></i>
+                    </div>
+                    <div onclick="playPause()">
+                        <i class="fa-solid fa-play" id="control-icon"></i>
+                    </div>
+                    <div id="next-btn" onclick="nextSong()">
+                        <i class="fa-solid fa-forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
