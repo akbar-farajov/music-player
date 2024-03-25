@@ -10,8 +10,8 @@ const musician = document.getElementById('songer');
 const cover = document.querySelector('.music-img');
 
 //songs
-const songs = ['All-eyez-on-me', 'Goosebumps', 'Middle-child'];
-const songers = ['2Pac', 'Travis-scott', 'J-cole'];
+const songs = ['all-eyez-on-me', 'goosebumps', 'middle-child'];
+const songers = ['2pac', 'travis-scott', 'j-cole'];
 
 let songIndex = 0;
 
